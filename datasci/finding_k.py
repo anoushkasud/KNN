@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 ####reading data####
 data = pd.read_csv('C:\\Users\\HP\\Desktop\\datasci\\train.csv\\train.csv')
 
-#print(data.head())  #prints top 5 rows#
-#print(data.tail())  #prints last 5 rows#
-#print(data['label'].value_counts()) #returns a series object counting all the unique values#
+print(data.head())  #prints top 5 rows#
+print(data.tail())  #prints last 5 rows#
+print(data['label'].value_counts()) #returns a series object counting all the unique values#
 
 ####seprating dependent and independent variables####
 X = data.drop(['label'],axis = 1)
@@ -22,7 +22,7 @@ y = data['label']
 from sklearn.model_selection import train_test_split
 
 train_x,test_x,train_y,test_y = train_test_split(X,y,test_size = 0.3, random_state = 10)
-#print(train_x.shape,test_x.shape,train_y.shape,test_y.shape)
+print(train_x.shape,test_x.shape,train_y.shape,test_y.shape)
 
 
 #in this case we don't need to scale data
